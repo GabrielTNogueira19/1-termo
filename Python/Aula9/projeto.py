@@ -99,7 +99,7 @@ while True:
                     valor_a_pagar = 15 + (horario_adicional*3)
                 
                 print(f"Sua visita ficou em um total de R${valor_a_pagar}")
-                print("O valor será debitado de sua fatura.")
+                print("O valor será debitado de sua fatura")
                 print("Obrigado pela visita. Volte sempre!")
                                 
             elif opcao_saida == 2:

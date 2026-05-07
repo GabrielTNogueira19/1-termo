@@ -114,37 +114,23 @@ while True:
                     horas_permanecidas = horario_saida - emissao_ticket 
 
                     if horas_permanecidas <= 0.25:
-
-                        print("Sua visita ficou em um total de R$ 0,00")
-                        print("Obrigado pela visita. Volte sempre!")
-                    
+                        valor_a_pagar = 0
                     elif horas_permanecidas <= 3:
-
-                        print("Sua visita ficou em um total de R$ 15,00")
-                        print("Por favor pague o valor na cabina de saída.")
-                        sleep(1)
-                        ticket_pago = input("O ticket foi pago? (sim/não) ")
-                        if ticket_pago.lower() == "sim":
-
-                            print("Obrigado pela visita. Volte sempre!")
-                        
-                        else:
-                            print("Por favor pague o ticket e tente sair novamente!")
-                    
+                        valor_a_pagar = 15
                     else:
                         horario_adicional = horas_permanecidas - 3 
-                        valor_pagar = 15 + (horario_adicional*3)
+                        valor_a_pagar = 15 + (horario_adicional*3)
 
-                        print(f"Sua visita ficou em um total de R${valor_pagar}")
-                        print("Por favor fague o valor na cabina de saída.")
-                        sleep(1)
-                        ticket_pago = input("O ticket foi pago? (sim/não) ")
-                        if ticket_pago.lower() == "sim":
+                    print(f"Sua visita ficou em um total de R${valor_a_pagar}")
+                    print("Por favor fague o valor na cabina de saída.")
+                    sleep(1)
+                    ticket_pago = input("O ticket foi pago? (sim/não) ")
+                    if ticket_pago.lower() == "sim":
 
-                            print("Obrigado pela visita. Volte sempre!")
-                        
-                        else:
-                            print("Por favor pague o ticket e tente sair novamente!")
+                        print("Obrigado pela visita. Volte sempre!")
+                    
+                    else:
+                        print("Por favor pague o ticket e tente sair novamente!")
 
         else:
             print("Nenhum carro estácionado. Tente novamente!")

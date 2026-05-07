@@ -1,0 +1,27 @@
+
+# Manipulação de arquivos de texto com python
+manipulacao_arquivos = "Manipulação de Arquivos e Texto com python"
+
+print(manipulacao_arquivos.upper()) # Maiúsculo
+print(manipulacao_arquivos.lower()) # Minúsculo
+print(manipulacao_arquivos.strip()) # Remove espaços em branco
+print(manipulacao_arquivos.split()) # Divide a String em uma lista de palavras
+
+print(manipulacao_arquivos.replace("python", "java")) # Substituí "python" por "java" no texto
+print(manipulacao_arquivos.replace(" ", "_")) # Substituí espaços " " por "_" no texto
+
+print(manipulacao_arquivos.count("a")) # Conta quantas letras a aparecem na string
+print(manipulacao_arquivos.count("python")) # Conta quantas vezes a palavra "python" aparece na string
+
+# É possivél usar duas funções ao mesmo tempo. Segue o exemplo abaixo:
+
+print(manipulacao_arquivos.upper().count("PYTHON")) # Conta quantas vezes a palavra "Python" aparece,convertendo toda a frase em maiúscula
+
+print(manipulacao_arquivos.find("python")) # Retorna a posição da primeira ocorrência da palavra "python"
+
+print(manipulacao_arquivos.title()) # Converte a primeira letra da palavra para maiúscula
+print(manipulacao_arquivos.capitalize()) # Converte a primeira letra da palavra para maiúscula e o restante para minúscula
+print(manipulacao_arquivos.swapcase()) # Converte as letras maiúsculas em minúsculas e vice-versa
+
+print(manipulacao_arquivos.center(50, "*")) # centraliza a string e preenche com "*" até atingir 50 caracteres
+print(manipulacao_arquivos.startswith("Manipulação")) # Verifica se a string começa com "Manipulação"

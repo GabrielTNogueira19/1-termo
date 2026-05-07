@@ -1,0 +1,1 @@
+nome_jogador = input("Insira o seu Nickname (Nome como jogador): ")

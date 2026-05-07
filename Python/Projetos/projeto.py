@@ -36,7 +36,6 @@ while True:
             if estado_TAG.lower() == "sim":
                 
                 horario_entrada = float(input("Informe o horário de entrada do veículo: "))
-                posicao_tag = int(input("Informe o código da TAG: "))
                 print("Horário de entrada registrado! Ao sair o valor sera debitado automaticamente conforme o tempo permanecido.")
                 print("Aproveite sua visita ao Shopping Center!")
                 print("Abrindo Cancela!")
@@ -85,9 +84,9 @@ while True:
 
             if opcao_saida == 1:
                 valor_tag = int(input("Informe o código da TAG: "))
+                horario_entrada = float(input("Informe o horário de entrada do veículo: "))
                 horario_saida = float(input("Informe o horário de saida do veículo: "))
-                emissao_tag = numero_tag[valor_tag]
-                horas_permanecidas = horario_saida - emissao_tag 
+                horas_permanecidas = horario_saida - horario_entrada 
 
                 if horas_permanecidas <= 0.25:
                     valor_a_pagar = 0
@@ -128,7 +127,20 @@ while True:
                     if ticket_pago.lower() == "sim":
 
                         print("Obrigado pela visita. Volte sempre!")
+                        vagas_disponiveis += 1
+                        vagas_ocupadas -= 1
                     
+                    else:
+                        print("Por favor pague o ticket e tente sair novamente!")
+                else:
+                    print("Valor de R$50,00 será cobrado por perda do ticket")
+                    print("Por favor dirija-se a cabina de saída para realizar o pagamento.")
+                    ticket_pago = input("O ticket foi pago? (sim/não) ")
+                    if ticket_pago.lower() == "sim":
+
+                        print("Obrigado pela visita. Volte sempre!")
+                        vagas_disponiveis += 1
+                        vagas_ocupadas -= 1
                     else:
                         print("Por favor pague o ticket e tente sair novamente!")
 

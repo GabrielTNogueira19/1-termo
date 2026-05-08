@@ -18,7 +18,7 @@ while True:
     print("= Menu de Opções =")
     print("1- Entrar no estacionamento.")
     print("2- Sair do estacionamento")
-    
+    print("3- Sair do programa")
     opcao_escolhida = int(input("Insira o número da opção que deseja realizar: "))
 
     if opcao_escolhida == 1:
@@ -97,9 +97,12 @@ while True:
                     horario_adicional = horas_permanecidas - 3 
                     valor_a_pagar = 15 + (horario_adicional*3)
                 
-                print(f"Sua visita ficou em um total de R${valor_a_pagar}")
+                valor_tag = valor_a_pagar - (valor_a_pagar*0.1)
+                print(f"Sua visita ficou em um total de R${valor_tag}")
                 print("O valor será debitado de sua fatura")
                 print("Obrigado pela visita. Volte sempre!")
+                vagas_disponiveis += 1
+                vagas_ocupadas -= 1
                                 
             elif opcao_saida == 2:
                 
@@ -120,6 +123,7 @@ while True:
                         horario_adicional = horas_permanecidas - 3 
                         valor_a_pagar = 15 + (horario_adicional*3)
 
+                    
                     print(f"Sua visita ficou em um total de R${valor_a_pagar}")
                     print("Por favor fague o valor na cabina de saída.")
                     sleep(1)
@@ -146,3 +150,7 @@ while True:
 
         else:
             print("Nenhum carro estácionado. Tente novamente!")
+
+    elif opcao_escolhida == 3:
+        print("Encerrando programa...")
+        break

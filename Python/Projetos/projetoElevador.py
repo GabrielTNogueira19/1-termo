@@ -55,6 +55,23 @@ def descendo(andar_desejado):
     andar_atual = andar_desejado
     # return andar_atual
 
+def contando_pessoas():
+    global quantidade_pessoas
+
+    saiu_pessoas = int(input("Insira a quantidade de pessoas que sairam: "))
+    entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
+
+    quantidade_pessoas = quantidade_pessoas - saiu_pessoas
+
+    quantidade_pessoas = quantidade_pessoas + entrou_pessoas
+
+    if quantidade_pessoas > 5:
+        
+        pessoas_a_mais = quantidade_pessoas - 5
+        print(f"Capacidade máxima exedida, será necessária a saida de {pessoas_a_mais} pessoas")
+    else:
+        pass
+
 
 print("Você Está Entrando no Elevador!")
 quantidade_pessoas = int(input("Insira a quantidade de pessoas no elevador: "))
@@ -90,37 +107,13 @@ while True:
         if andar_desejado > andar_atual:
 
             subindo(andar_desejado)
-            saiu_pessoas = int(input("Insira a quantidade de pessoas que sairam: "))
-            entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
-
-            quantidade_pessoas = quantidade_pessoas - saiu_pessoas
-
-            quantidade_pessoas = quantidade_pessoas + entrou_pessoas
-
-            if quantidade_pessoas > 5:
-                
-                pessoas_a_mais = quantidade_pessoas - 5
-                print(f"Capacidade máxima exedida, será necessária a saida de {pessoas_a_mais} pessoas")
-            else:
-                pass
+            contando_pessoas()
 
         elif andar_desejado < andar_atual:
 
             descendo(andar_desejado)
-            saiu_pessoas = int(input("Insira a quantidade de pessoas que sairam: "))
-            entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
-
-            quantidade_pessoas = quantidade_pessoas - saiu_pessoas
-
-            quantidade_pessoas = quantidade_pessoas + entrou_pessoas
-
-            if quantidade_pessoas > 5:
-                
-                pessoas_a_mais = quantidade_pessoas - 5
-                print(f"Capacidade máxima exedida, será necessária a saida de {pessoas_a_mais} pessoas")
-            else:
-                pass
+            contando_pessoas()
         else:
             print("Você já está no andar desejado!")
-            
+
 # =================================================================================================================================

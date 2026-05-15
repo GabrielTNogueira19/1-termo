@@ -6,15 +6,12 @@
 # O programa deve continuar rodando até que o usuário decida encerrar.
 # 
 # requisitos funcionais:
-# 1. O programa deve permitir que o elevador contenha no máximo 5 pessoas.
-# 2. O programa deve permitir que o usuário chame o elevador para um andar específico.
-# 3. O programa deve permitir que o usuário escolha um andar de destino após entrar no elevador.
-# 4. O programa deve exibir mensagens indicando o andar atual, o número de pessoas no elevador e as ações realizadas (subindo, descendo, parando).
-# 5. O programa deve continuar rodando até que o usuário decida encerrar.
-# 6. O elevado deve começar no andar 0.
-
-# requisitos não funcionais:
-# 1. O sistema deve impedir que o usuário digite um andar menor que 0 ou maior que 10.
+# RF01. O programa deve permitir que o elevador contenha no máximo 5 pessoas.
+# RF02. O programa deve permitir que o usuário chame o elevador para um andar específico.
+# RF03. O programa deve permitir que o usuário escolha um andar de destino após entrar no elevador.
+# RF04. O programa deve exibir mensagens indicando o andar atual, o número de pessoas no elevador e as ações realizadas (subindo, descendo, parando).
+# RF05. O programa deve continuar rodando até que o usuário decida encerrar.
+# RF06. O elevado deve começar no andar 0.
 
 # Código:
 # =================================================================================================================================

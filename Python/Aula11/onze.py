@@ -14,10 +14,10 @@
 # print(saudacao("Gabriel"))
 
 
-# def nome():
+# def usuario():
 #     nome = input("Digite seu nome: ")
 #     return nome
-# print(f"Olá, {nome()}!")
+# print(f"Olá, {usuario()}!")
 
 
 # def valores():
@@ -27,3 +27,20 @@
 #     c = int(input("Digite o terceiro valor:"))
 #     return a, b, c
 # print(f"O maior valor é: {max(valores())}")
+
+
+# # Reutilizando funções
+# usuario()
+# valores()
+
+
+# Conceitos Chave:
+# def: Indica o início da definição da função.
+# Nome: Identifica a função para você chama-la depois.
+# Parâmetros: Dados que a função recebe (opcional).
+# return: Envia o resultado de volta para quem chamou (opicional).
+
+# def calcular_dobro():
+#     numero = float(input("Qual número você deseja dobrar? "))
+#     return numero*2
+# print(calcular_dobro())

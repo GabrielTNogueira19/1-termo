@@ -60,17 +60,23 @@ def contando_pessoas():
 
     saiu_pessoas = int(input("Insira a quantidade de pessoas que sairam: "))
     entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
+    
+    if saiu_pessoas > 6:
+        print("Insira um valor válido, o elevador não pode conter mais de 5 pessoas!")
+    
+    elif entrou_pessoas < 0 and saiu_pessoas < 0:
+        print("Insira um valor válido, o número de pessoas que entraram não pode ser negativo!")
 
-    quantidade_pessoas = quantidade_pessoas - saiu_pessoas
-
-    quantidade_pessoas = quantidade_pessoas + entrou_pessoas
-
-    if quantidade_pessoas > 5:
-        
-        pessoas_a_mais = quantidade_pessoas - 5
-        print(f"Capacidade máxima exedida, será necessária a saida de {pessoas_a_mais} pessoas")
     else:
-        pass
+        quantidade_pessoas = quantidade_pessoas - saiu_pessoas
+        quantidade_pessoas = quantidade_pessoas + entrou_pessoas
+
+        if quantidade_pessoas > 5:
+            
+            pessoas_a_mais = quantidade_pessoas - 5
+            print(f"Capacidade máxima exedida, será necessária a saida de {pessoas_a_mais} pessoas")
+        else:
+            pass
 
 
 print("Você Está Entrando no Elevador!")
@@ -100,6 +106,8 @@ while True:
             break
         elif andar_desejado.lower() == "t":
             andar_desejado = 0
+        elif andar_desejado > 9 or andar_desejado < 0:
+            print("Insira um andar válido de acordo com o painel!")
         else:
             andar_desejado = int(andar_desejado)
 

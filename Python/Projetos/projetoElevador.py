@@ -106,13 +106,12 @@ while True:
             break
         elif andar_desejado.lower() == "t":
             andar_desejado = 0
-        elif andar_desejado > 9 or andar_desejado < 0:
-            print("Insira um andar válido de acordo com o painel!")
         else:
             andar_desejado = int(andar_desejado)
 
-
-        if andar_desejado > andar_atual:
+        if andar_desejado > 9 or andar_desejado < 0:
+            print("Insira um andar válido de acordo com o painel!")
+        elif andar_desejado > andar_atual:
 
             subindo(andar_desejado)
             contando_pessoas()
